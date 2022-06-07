@@ -12,6 +12,10 @@ public class People {
         this.address = address;
     }
 
+    public void setAge(int age) {
+        this.age = age;
+    }
+
     String getName() {
         return name;
     }

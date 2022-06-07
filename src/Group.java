@@ -1,4 +1,4 @@
-import java.util.Arrays;
+import java.util.ArrayList;
 
 public class Group {
     private int nameGroup;
@@ -6,19 +6,20 @@ public class Group {
 
     //public void MakeArray() {
     Teacher teacher;
-    Student[] array;
-    //Student studDel;
-    //Student[] newArray;
+    ArrayList<Student> list;
+
+
 
     //	{
     //return ArrayStudentPrint();
     //for (int i=0;i<array.length;i++)	{
     //array[i] = Student student;
     //}
-    public Group(int nameGroup, int numCourse, Student[] array, Teacher teacher) {
+    public Group(int nameGroup, int numCourse, ArrayList<Student> list, Teacher teacher) {
 
         this.nameGroup = nameGroup;
-        this.array = array;
+        this.list = list;
+        //this.array = array;
         this.teacher = teacher;
         this.numCourse = numCourse;
     }
@@ -38,44 +39,59 @@ public class Group {
     @Override
     public String toString() {
         return "� group: " + this.nameGroup + " cours: " + this.numCourse + "\n" +
-                " students: " + Arrays.toString(array) + "\n" + this.teacher.toString();
-    }
-
-    Student[] getArray() {
-        return this.array;
+                " students: " + this.list.toString() + "\n" + this.teacher.toString();
     }
 
     public void setRemoveStud(Student studDel) {
-        //this.studDel = studDel;
-        for (int i = 0; i < array.length; i++) {
-            if (array[i] == studDel) {
-                array[i] = null;
-                break;
-            }
-
-        }
-
-        Student newArray[] = new Student[array.length - 1];
-        int j = 0;
-        for (int i = 0; i < array.length; i++) {
-
-            if (array[i] != null) {
-                // for (j = 0; j < newArray.length; j++)
-                newArray[j] = array[i];
-                j++;
-            }
-        }
-        array = newArray;
+        int index = list.indexOf(studDel);
+        list.remove (index);
     }
-
     public void addStudent(Student studAdd) {
-        Student newArray[] = new Student[array.length + 1];
-        for (int j = 0; j < array.length; j++) {
-            newArray[j] = array[j];
-
-        }
-        newArray[array.length] = studAdd;
-        //for (j = 0; j < newArray.length; j++)
-        array = newArray;
+//        list.add(studAdd);
+          list.add(0,studAdd);
     }
+//        //this.studDel = studDel;
+//        for (int i = 0; i < array.length; i++) {
+//            if (array[i] == studDel) {
+//                array[i] = null;
+//                break;
+//            }
+
+//    Student[] getArray() {
+//        return this.array;
+//    }
+//
+//    public void setRemoveStud(Student studDel) {
+//        //this.studDel = studDel;
+//        for (int i = 0; i < array.length; i++) {
+//            if (array[i] == studDel) {
+//                array[i] = null;
+//                break;
+//            }
+//
+//        }
+//
+//        Student newArray[] = new Student[array.length - 1];
+//        int j = 0;
+//        for (int i = 0; i < array.length; i++) {
+//
+//            if (array[i] != null) {
+//                // for (j = 0; j < newArray.length; j++)
+//                newArray[j] = array[i];
+//                j++;
+//            }
+//        }
+//        array = newArray;
+//    }
+//
+//    public void addStudent(Student studAdd) {
+//        Student newArray[] = new Student[array.length + 1];
+//        for (int j = 0; j < array.length; j++) {
+//            newArray[j] = array[j];
+//
+//        }
+//        newArray[array.length] = studAdd;
+//        //for (j = 0; j < newArray.length; j++)
+//        array = newArray;
+//    }
 }
