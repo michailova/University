@@ -4,6 +4,9 @@ public class Group {
     private int nameGroup;
     private int numCourse;
 
+    private  int yearStart;
+    private  int yearFinish;
+
     //public void MakeArray() {
     Teacher teacher;
     ArrayList<Student> list;
@@ -15,13 +18,31 @@ public class Group {
     //for (int i=0;i<array.length;i++)	{
     //array[i] = Student student;
     //}
-    public Group(int nameGroup, int numCourse, ArrayList<Student> list, Teacher teacher) {
+    public Group(int nameGroup, int numCourse, ArrayList<Student> list, Teacher teacher, int yearStart, int yearFinish) {
 
         this.nameGroup = nameGroup;
         this.list = list;
         //this.array = array;
         this.teacher = teacher;
         this.numCourse = numCourse;
+        this.yearStart = yearStart;
+        this.yearFinish = yearFinish;
+    }
+
+    public int getYearStart() {
+        return yearStart;
+    }
+
+    public void setYearStart(int yearStart) {
+        this.yearStart = yearStart;
+    }
+
+    public int getYearFinish() {
+        return yearFinish;
+    }
+
+    public void setYearFinish(int yearFinish) {
+        this.yearFinish = yearFinish;
     }
 
     public void setTeacher(Teacher teacher) {
@@ -39,7 +60,7 @@ public class Group {
     @Override
     public String toString() {
         return "� group: " + this.nameGroup + " cours: " + this.numCourse + "\n" +
-                " students: " + this.list.toString() + "\n" + this.teacher.toString();
+                " students: " + this.list.toString() + "\n" + this.teacher.toString()+ " yearStart" + this.yearStart+ " yearFinish" + this.yearFinish;
     }
 
     public void setRemoveStud(Student studDel) {

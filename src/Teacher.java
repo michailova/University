@@ -1,37 +1,55 @@
 import exception.OldException;
 import exception.YoungException;
 
-public class Teacher extends People {
+public class Teacher extends People implements Comparable<Teacher> {
 
     private int basePay;
     private int workDays;
 
-    public Teacher(String name, String surname, int age, Address address) {
-        super(name, surname, age, address);
+    public Teacher(String name, String surname, int age, Address address, String gender) {
+        super(name, surname, age, address, gender);
         this.basePay = 50;
         this.workDays = 5;
     }
+
+    @Override
+    public String getGender() {
+        return super.getGender();
+    }
+
+    @Override
+    public void setGender(String gender) {
+        super.setGender(gender);
+    }
+
     //private String teacherPayment;
 
     /*public void TeacherPayment () {
         System.out.println(basePay*workDays);
         }*/
     public void setWorkDays(int workDays) {
-        if (workDays > 31 && workDays < 1)
+        if (workDays < 31 && workDays > 1)
             this.workDays = workDays;
     }
-        int getWorkdays() {return workDays; }
 
-        public void setBasePay(int basePay) {
-            if (basePay > 100 && basePay < 45)
-                this.basePay = basePay;
-        }
-            int getBasePay() {return basePay; }
+    int getWorkdays() {
+        return workDays;
+    }
+
+    public void setBasePay(int basePay) {
+        if (basePay < 100 && basePay > 45)
+            this.basePay = basePay;
+    }
+
+    int getBasePay() {
+        return basePay;
+    }
 
     public int TeacherPayment() {
         int teacherPayment = basePay * workDays;
         return teacherPayment;
     }
+
 
 //    public void setBasePay(int basePay) {
 //        this.basePay = basePay;
@@ -74,7 +92,12 @@ public class Teacher extends People {
 
     @Override
     public String toString() {
-        return "teacher: " + super.getName() + " " + getSurname() + " age: " + super.getAge() + " address: " + super.getAddress() + " payment: " + this.TeacherPayment();
+        return "teacher: " + super.getName() + " " + getSurname() + " age: " + super.getAge() + " gender: " + super.getGender() + " address: " + super.getAddress() + " payment: " + this.TeacherPayment();
+    }
+
+    @Override
+    public int compareTo(Teacher o) {
+        return this.getSurname().compareTo(o.getSurname());
     }
 }
 

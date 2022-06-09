@@ -2,13 +2,23 @@ import exception.OldException;
 import exception.YoungException;
 
 public class Student extends People {
-    public Student(String name, String surname, int age, Address address) {
-        super(name, surname, age, address);
+    public Student(String name, String surname, int age, Address address, String gender) {
+        super(name, surname, age, address, gender);
+    }
+
+    @Override
+    public String getGender() {
+        return super.getGender();
+    }
+
+    @Override
+    public void setGender(String gender) {
+        super.setGender(gender);
     }
 
     @Override
     public String toString() {
-        return "student: " + super.getName() + " " + super.getSurname() + " age: " + super.getAge() + " address: " + super.getAddress();
+        return "student: " + super.getName() + " " + super.getSurname() + " age: " + super.getAge() + " address: " + super.getAddress()+ " gender: " + super.getGender();
     }
 
     @Override
