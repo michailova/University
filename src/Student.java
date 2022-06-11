@@ -1,9 +1,14 @@
 import exception.OldException;
 import exception.YoungException;
 
-public class Student extends People {
+public class Student extends People implements Comparable <Student>{
     public Student(String name, String surname, int age, Address address, String gender) {
         super(name, surname, age, address, gender);
+    }
+
+    @Override
+    String getSurname() {
+        return super.getSurname();
     }
 
     @Override
@@ -46,4 +51,24 @@ public class Student extends People {
             throw new OldException("старик");
         }
     }
+
+//    @Override
+//    public int compareTo(Car o) {
+//        if (brend.compareTo(o.brend) == 0) {
+//            return this.model.compareTo(o.model);
+//        }
+//        return this.model.compareTo(o.model);
+//    }
+//}
+//    @Override
+//    public int compareTo(Car o) {
+//
+//        return o.maxSpeed - this.maxSpeed;
+//    }
+
+    @Override
+    public int compareTo(Student o) {
+        return this.getSurname().compareTo(o.getSurname());
+    }
+
 }

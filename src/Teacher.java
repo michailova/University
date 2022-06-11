@@ -22,6 +22,8 @@ public class Teacher extends People implements Comparable<Teacher> {
         super.setGender(gender);
     }
 
+
+
     //private String teacherPayment;
 
     /*public void TeacherPayment () {

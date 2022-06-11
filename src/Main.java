@@ -39,7 +39,7 @@ public class Main {
             }
         };
         Address addressStudent4 = new Address("111hjchm", "ikls", 6, 3);
-        Student student4 = new Student("Roma", "Petrov", 19, addressStudent4, "young");
+        Student student4 = new Student("Roma", "Petrov", 20, addressStudent4, "young");
 //        addressStudent1.setStreet("Moscovskaya");
 //		        Address address1 = new Address("������", 45);
 //		        Student student2 = new Student("Misha", address1);
@@ -96,7 +96,15 @@ public class Main {
                 .sorted(Teacher::compareTo)
                 .forEach(System.out::println);
 
+        AgeComparator ageComparatorStudent = new AgeComparator();
+        list.stream()
+                .sorted(ageComparatorStudent)
+                .forEach(c -> System.out.println(c));
     }
-
+//        AgeComparator ageComparatorTeacher = new AgeComparator();
+//        teachers.stream()
+//                .sorted(ageComparatorTeacher)
+//                .forEach(System.out::println);
+//}
 
 }
