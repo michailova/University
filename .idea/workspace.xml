@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aa37f8db-abd7-4133-8f1f-d51f3442835a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/AgeComparator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GroupTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/PeopleTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TeacherTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/University2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/University2.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Teacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Teacher.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +46,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit4",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4": "",
     "create.test.in.the.same.root": "true",
-    "last_opened_file_path": "C:/Users/Repository2/UnitTest"
+    "last_opened_file_path": "C:/Users/Repo/CheckPassword"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -149,7 +149,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654805475597</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Comparator, Test">
+      <created>1654962900072</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1654962900072</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -167,6 +174,7 @@
     <MESSAGE value="2" />
     <MESSAGE value="exceptions" />
     <MESSAGE value="stream" />
-    <option name="LAST_COMMIT_MESSAGE" value="stream" />
+    <MESSAGE value="Comparator, Test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Comparator, Test" />
   </component>
 </project>
